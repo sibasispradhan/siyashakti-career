@@ -21,9 +21,13 @@ def load_jobs_from_db():
 def load_jobs_list_db():
   with engine.connect() as conn:
     result = conn.execute(text("select * from jobs"))
+    columns = [
+      "id", "title", "location", "salary", "currency", "responsibilities",
+      "requirements", "created_at", "updated_at"
+    ]
     jobs = []
     for row in result.all():
-      jobs.append([x for x in row])
+      jobs.append(dict(zip(columns, row)))
     return jobs
 
 
