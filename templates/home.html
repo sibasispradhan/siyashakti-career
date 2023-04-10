@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jovian Careers</title>
+    <title>{{CompanyName}} Careers</title>
     {% include 'bootstrap.html' %}
   </head>
   <body>
@@ -9,26 +9,46 @@
     {% include 'banner.html' %}
     <div class="container">
       <h1 class="text-center mt-2 mb-4">
-        Jovian Careers
+        {{CompanyName}} Careers
       </h1>
       <div class="row" style="margin-bottom:32px">
         <div class="col-md-6">
       <p class="lead">
-        At Jovian, we’re on a mission to build the most highly reputed technical university in the world, and we’re building it completely online. Our flagship data science program helps working professionals with a background in programming or analytics make a career transition to data science. We also offer several free beginner-friendly courses and have a fast-growing community of 200,000+ users.
+        <b>Join Our Team!</b>
+      <br/>
+      At {{CompanyName}}, we are building a team of talented and passionate individuals who are dedicated to revolutionizing the way businesses use data. If you are looking for an exciting and challenging career in the technology industry, we invite you to explore our current job openings and consider joining our team.
+      <br/>
+      <b>Who We Are Looking For</b>
+      <br/>
+      We are seeking individuals who are creative, collaborative, and driven to succeed. As a startup company, we value flexibility, adaptability, and a willingness to learn and grow. We are committed to creating a culture that fosters innovation, teamwork, and continuous improvement.
+      <br/>
+      <b>What We Offer</b>
+      <br/>
+      At {{CompanyName}}, we understand that our employees are our most valuable asset. That's why we offer a competitive salary and benefits package, as well as opportunities for professional growth and development. As a member of our team, you will have the opportunity to work on cutting-edge technology projects and collaborate with other talented individuals.
+      <br/>
+      <b>In addition, we offer:</b>
+      <br/>
+      Flexible work arrangements, including remote work options
+        <br/>
+      A fun and supportive work environment
+        <br/>
+      A commitment to work-life balance
+        <br/>
+      A focus on continuous learning and development
       </p>
         </div>
         <div class="d-none d-md-block col-md-6">
-        <img src="/static/people.jpeg" style="height:320px;border-radius:4px;">
+        <img src="/static/BIImage.jpg" style="height:320px;border-radius:4px;">
         </div>
       </div>
-      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <h2 class="text-center mt-2 mb-4">Jobs Opening</h2>
       <div>
         {% for job in jobs %}
           {% include 'jobitem.html' %}
         {% endfor %}
       </div>
       <div class="text-center">
-      <a class="btn btn-primary btn-lg" href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Opernings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A">Contact Us</a>
+      <a class="btn btn-primary btn-lg" href="mailto:job@siashakti.com?subject=Question%20about%20Job%20Opernings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A">Contact Us</a>
       </div>
     </div>
     {% include 'footer.html' %}
