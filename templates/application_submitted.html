@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Application Submitted</title>  
+    <link rel="icon" href="static/logo.svg" type="image/icon type">
     {% include 'bootstrap.html' %}
   </head>
   <body>
@@ -13,7 +14,7 @@
         {{CompanyName}} Careers
       </h1>
 
-      <p>Your application for the role of <b>{{job['title']}}</b> at {{CompanyName}} has been submitted!</p>
+      <p>Your application for the role of <b>{% for job in job %}{{job.title}}{% endfor %}</b> at {{CompanyName}} has been submitted!</p>
       
       <b>Full Name</b>
       <div class="mb-2">{{application['full_name']}}</div>
