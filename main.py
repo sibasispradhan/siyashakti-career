@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
   jobs = load_jobs_from_db()
-  return render_template('home.html', jobs=jobs, CompanyName='Siashakti')
+  return render_template('home.html', jobs=jobs, CompanyName='Siyashakti')
 
 
 @app.route('/api/jobs')
@@ -22,8 +22,7 @@ def show_job(id):
 
   if not job:
     return "Not Found", 404
-
-  return render_template('jobpage.html', job=job, CompanyName='Siashakti')
+  return render_template('jobpage.html', job=job, CompanyName='Siyashakti')
 
 
 @app.route("/api/job/<id>")
@@ -40,7 +39,7 @@ def apply_to_job(id):
   return render_template('application_submitted.html',
                          application=data,
                          job=job,
-                         CompanyName='Siashakti')
+                         CompanyName='Siyashakti')
 
 
 if __name__ == '__main__':
